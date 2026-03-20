@@ -1,0 +1,27 @@
+public class Main
+{
+	public static void main(String[] args) {
+	    String str = "sagar";
+	    int left_pointer = 0;
+	    int right_pointer = str.length()-1;
+	    System.out.println(left_pointer);
+	    while(left_pointer<right_pointer)
+	    {
+	        System.out.println("Compairing Value i "+str.charAt(left_pointer)+" with value of j "+str.charAt(right_pointer));
+	        if(str.charAt(right_pointer)!=str.charAt(left_pointer))
+	        {
+	        System.out.println("String is not palimdrom");
+	        break;
+	        }
+	        else
+	        {
+	           left_pointer++;
+	           System.out.println(left_pointer);
+	           
+	           right_pointer--;
+	           System.out.println(right_pointer);
+	        }
+	    }
+	    
+	}
+}
