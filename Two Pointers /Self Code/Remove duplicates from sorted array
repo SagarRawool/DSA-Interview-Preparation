@@ -1,0 +1,27 @@
+import java.util.Arrays;
+public class Main
+{
+	public static void main(String[] args) {
+		//System.out.println("Hello World");
+		int arr[] = {1,2,2,3,4,5,5};
+		//int i=0;
+		int j=0;
+		for(int i=0;i<arr.length-1;i++)
+		{
+		    System.out.println("Comparing Value of i "+arr[i]+" with value of i+1 "+arr[i+1]);
+		    if(arr[i]!=arr[i+1]){
+		        System.out.println("Transfering value of index "+i+ " to index j "+j);
+		        arr[j]=arr[i];
+		        j++;
+		    }
+		}
+		//System.out.println(Arrays.toString(arr));
+		arr[j] = arr[arr.length-1];
+		System.out.println(Arrays.toString(arr));
+		System.out.println("final position of j is : "+j);
+		for(int i=0;i<=j;i++){
+		    System.out.print(arr[i]);
+		}
+		
+	}
+}
