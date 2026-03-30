@@ -1,0 +1,21 @@
+public class Main
+{
+	public static void main(String[] args) {
+	    int [] users = {100,48,82,57,34,112,65};
+	    int sum = 0;
+	    int i;
+	    int window_size = 2;
+	    for(i=0;i<window_size; i++){
+	        sum = sum + users[i];
+	    }
+	    System.out.println("Sum of window 1 is : "+sum);
+	    for (i=1;i<=users.length-window_size;i++)
+	    {
+	        System.out.println("Before Element is : "+users[i-1]);
+	        System.out.println("After Element is : "+users[i+window_size-1]);
+	        //System.out.println("Adding numbers : "+users[i-1]+ " "+users[i+window_size-1]+);
+	        sum = sum - users[i-1] + users[i+window_size-1];
+	        System.out.println("Sum of window "+(i+1)+" is : "+sum);
+	    }
+	}
+}
